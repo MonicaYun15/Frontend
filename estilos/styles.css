@@ -1,0 +1,302 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and navigation */
+#header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar span {
+    margin-left: auto;
+    padding: 20px;
+}
+
+.nav-item h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-item:hover h3 {
+    color: #0076d6;
+}
+
+/* Logo Cisco */
+.logo-link img {
+    width: 100px;
+    height: auto;
+}
+
+/* Hero section */
+.hero-section {
+    background-image: url('./assets/img/homepage-hero-ai-1600x480.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 480px;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 0;
+}
+
+.hero-title {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero-text {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hero-button {
+    background-color: lightskyblue;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: #6ec1e4;
+}
+
+/* Solutions Navigation */
+.solutions-nav {
+    background-color: rgb(38, 38, 89);
+    padding: 20px 0;
+    width: 100%;
+}
+
+.solutions-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+}
+
+.solution-item h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.solution-item:hover h3 {
+    color: #6ec1e4;
+}
+
+/* Challenges section */
+.challenges-section {
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.challenges-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.challenges-text {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.challenge-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(38, 38, 89);
+}
+
+.challenge-article {
+    width: 60%;
+}
+
+.challenge-article-title {
+    color: white;
+    font-size: 22px;
+}
+
+.challenge-article-text {
+    color: white;
+    font-size: 16px;
+}
+
+.challenge-image {
+    width: 768px;
+    height: 432px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Product Section */
+.product-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.product-item {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-link {
+    display: block;
+    text-decoration: none;
+}
+
+.product-item:hover {
+    background-color: #0076d6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+#footer {
+    background-color: rgb(247, 247, 247);
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin-bottom: 30px;
+    gap: 40px;
+}
+
+.footer-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-item p:hover {
+    color: #0076d6;
+}
+
+.footer-divider {
+    border: 1px solid #b5b5b5;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .solutions-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-button {
+        width: 180px;
+    }
+
+    .logo-link img {
+        width: 80px;  /* Ajuste el tamaño para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar-container {
+        max-width: 500px;
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 24px; /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-button {
+        width: 160px;
+        height: 45px;
+    }
+
+    .solutions-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .solution-item h3 {
+        font-size: 16px;
+    }
+
+    .logo-link img {
+        width: 70px;  /* Ajusta el tamaño para dispositivos móviles más pequeños */
+    }
+}

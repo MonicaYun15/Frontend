@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden de Pizza</title>
+    <link rel="stylesheet" href="./estilos/pizza.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Haz tu pizza!</h1>
+
+        <div id="formulario">
+            <label for="ingrediente">Agregar Ingrediente:</label>
+            <input type="text" id="ingrediente" placeholder="Ejemplo: pepperoni, piña">
+            <button id="agregarIngrediente">Agregar Ingrediente</button>
+        </div>
+
+        <div id="pedido">
+            <button id="realizarPedido">Realizar Pedido</button>
+        </div>
+
+        <div id="pedidosRealizados">
+            <h2>Pedidos Realizados:</h2>
+            <div id="imagenesPizzas" class="imagenes">
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error" style="display: none;">
+            <p id="mensajeError"></p>
+        </div>
+    </div>
+
+    <script src="./scripts/pizza.js"></script>
+</body>
+</html>
+

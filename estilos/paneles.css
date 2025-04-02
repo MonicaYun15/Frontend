@@ -1,0 +1,70 @@
+:root {
+    --taupe-gray: #9A8F97;
+    --silver: #C3BABA;
+    --platinum: #E9E3E6;
+    --silver-green: #B2B2B2;
+    --dim-gray: #736F72;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    background-color: var(--taupe-gray);
+}
+
+.paneles {
+    display: flex;
+    height: 100vh;
+}
+
+.panel {
+    border: solid 4px var(--silver);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    transition: flex 0.3s ease; 
+    overflow: hidden; 
+}
+
+.panel p {
+    margin: 10px;
+    opacity: 0; /* Los párrafos estarán invisibles al principio */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.panel > p:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.abierto {
+    flex: 5;
+    transition: flex 0.5s ease; 
+}
+
+.panel.abierto > p:first-child {
+    transform: translateY(100%); /* Aparece desde arriba */
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition-delay: 0.3s; 
+}
+
+.panel.abierto > p:last-child {
+    transform: translateY(-100%); 
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition-delay: 0.3s; 
+}
+
+.panel.clicked {
+    flex: 0.8; /* Hace que el panel se vea más pequeño horizontalmente cuando se está haciendo clic */
+    transition: flex 0.1s ease; 
+}
+
+.dimgray {
+    background-color: var(--dim-gray);
+}

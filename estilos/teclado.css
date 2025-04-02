@@ -1,0 +1,42 @@
+:root {
+    --oxford-blue: #0A2239;
+    --moonstone: #53A2BE;
+    --blue: #1D84B5;
+    --gunmetal: #132E32;
+    --lapis-lazuli: #176087;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    background-color: var(--oxford-blue);
+}
+
+.teclas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+.tecla{
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    border: solid 5px var(--moonstone);
+    width: 100px;
+    height: 100px;
+}
+
+.tecla p{
+    text-align: center;
+    color: var(--moonstone);
+}
+
+.lapislazuli {
+    background-color: var(--lapis-lazuli);
+}
