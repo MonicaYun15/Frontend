@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio APIs</title>
+  <style>
+    body { font-family: Arial; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+
+<h2>Clima Actual</h2>
+<input type="text" id="cityInput" placeholder="Ingresa una ciudad">
+<button onclick="buscarClima()">Buscar Clima</button>
+
+<div id="weatherResult"></div>
+<div class="error" id="weatherError"></div>
+
+
+<script>
+const API_KEY = '3e8fb4c9f03199c53e6a89575b31e573';  
+
+async function buscarClima() {
+  const city = document.getElementById('cityInput').value || 'Monterrey';
+  const weatherResult = document.getElementById('weatherResult');
+  const weatherError = document.getElementById('weatherError');
+  weatherResult.innerHTML = '';
+  weatherError.innerHTML = '';
+
+  try {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
+    
+    if (!response.ok) {
+      if (response.status === 400 || response.status === 404) {
+        const errorData = await response.json();
+        throw new Error(`Error: ${errorData.message}`);
+      }
+      throw new Error('Error desconocido al consultar el clima.');
+    }
+
+    const data = await response.json();
+    weatherResult.innerHTML = `Clima en <b>${data.name}</b>: ${data.weather[0].description}, ${data.main.temp} °C`;
+  } catch (error) {
+    weatherError.innerText = error.message;
+  }
+}
+
+buscarClima();  
+</script>
+
+</body>
+</html>
